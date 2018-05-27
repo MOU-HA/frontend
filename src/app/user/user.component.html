@@ -1,9 +1,9 @@
 <div class="clear">
-  <h2>Liste de utilisateurs</h2>
-  <table class="table">
-    <thead>
+  <h2>Liste des utilisateurs</h2>
+  <table class="table table-sm " >
+    <thead class="thead-light">
       <tr>
-        <th scope="col">#</th>
+        <th scope="col">Id</th>
         <th scope="col">First Name</th>
         <th scope="col">Second Name</th>
         <th scope="col">First Surname</th>
@@ -13,15 +13,14 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
+      <tr *ngFor="let user of users">
+        <th>{{user.id}}</th>
+        <td>{{user.firstName}}</td>
+        <td>{{user.secondName}}</td>
+        <td>{{user.firstSurname}}</td>
+        <td>{{user.secondSurname}}</td>
+        <td>{{user.phone}}</td>
+        <td>{{user.address}}</td>
       </tr>
     </tbody>
   </table>
