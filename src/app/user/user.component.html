@@ -10,6 +10,7 @@
         <th scope="col">Second Surname</th>
         <th scope="col">phone</th>
         <th scope="col">address</th>
+        <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
@@ -21,6 +22,10 @@
         <td>{{user.secondSurname}}</td>
         <td>{{user.phone}}</td>
         <td>{{user.address}}</td>
+        <td>
+            <img src="assets/images/edit.png" class="editIcon" (click)="editUser(user)"> 
+            <img src="assets/images/erase.png" class="editIcon" (click)="deleteUser(user)">        
+        </td>       
       </tr>
     </tbody>
   </table>
